@@ -1,0 +1,65 @@
+<!--pages/comment/comment.wxml-->
+<!--最外层父元素 一部电影信息-->
+<view >
+  <!--1:电影大图片做为背景 模糊-->
+  <view class="detail-container" style="background:url({{info.images.large}}) no-repeat top"></view>
+  <!--2:灰色遮罩层-->
+  <view class="detail-mask"></view>
+  <!--3:电影完整信息-->
+  <view class="detail-info">
+    <!--4:左侧清晰小图片 24-->
+    <image src="{{info.images.large}}" class="detail-img"></image>
+    <!--5:右侧电影文字内容-->
+    <view class="detail">
+      <!--6:右侧电影标题-->
+      <view class="detail-title">{{info.title}}</view>
+      <!--7:右侧电影评分-->
+      <view class="detail-sc">{{info.rating.average}}</view>
+      <!--8:右侧电影国家-->
+      <view>{{info.countries[0]}}</view>
+      <!--9:右侧电影导演 end-->
+      <view>{{info.directors[0].name}}</view>
+    </view>
+    <!--detail end -->
+  </view>
+  <!--info end -->
+  <!--10:电影描述[故事简介]-->
+  <view class="desc">
+   {{info.summary}}
+  </view>
+  <!-- 剧照 -->
+  <view class="container">
+  <swiper circular next-margin="375rpx">
+  <swiper-item wx:for="{{ll}}" wx:key="index">
+  <image src="{{info.photos[index].image}}" class="viewimg"></image>
+  </swiper-item>
+  </swiper>
+  <image src="{{info.photos[0].image}}" class="viewimg"></image>
+  <!-- <image src="{{info.photos[1].image}}" class="viewimg"></image>
+  <image src="{{info.photos[2].image}}" class="viewimg"></image>
+  <image src="{{info.photos[3].image}}" class="viewimg"></image>
+  <image src="{{info.photos[4].image}}" class="viewimg"></image> -->
+  <!-- <image src="{{info.writers[1].avatars.small}}"></image>
+  <image src="{{info.writers[2].avatars.small}}"></image>
+  <image src="{{info.writers[3].avatars.small}}"></image>
+  <image src="{{info.writers[4].avatars.small}}"></image>
+  <image src="{{info.writers[5].avatars.small}}"></image> -->
+  </view>
+  <view class="liu">
+  <!--11:电影评论输入框!!(组件vant)-->
+  <van-field value="{{ val2 }}" placeholder="请留言.." bind:change="onChangeVal2" />
+  <!--12:评分[5颗星星](组件vant)-->
+  <view class="viewpingxing ">
+  <van-rate value="{{ val3 }}" count="{{ 6 }}" bind:change="onChangeval3" allow-half/>{{val3}}
+  </view>
+  <!--13:上传图片按钮(选中图片9张;预览)(组件vant)-->
+  <van-button bindtap="selectImg" class="btnimg" icon="photo-o"  plain>上传图片</van-button>
+  </view>
+  <!--14:预览图片区域-->
+  <view>
+  <block wx:for="{{image}}" wx:key="index">
+    <image src="{{item}}" class="comment-img"></image></block>
+  </view>
+  <!--15:提交评论【***上传图片;添加数据】(组件vant)-->
+  <van-button type="primary" class='tibtn' size="large" bindtap="submit" block>提交评论</van-button>
+</view>

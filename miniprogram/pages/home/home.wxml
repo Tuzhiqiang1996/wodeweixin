@@ -1,0 +1,17 @@
+<!--pages/home/home.wxml-->
+<!-- <text>pages/home/home.wxml</text> -->
+<view class="coninter">
+  <view class="subconinter">
+    <image src="{{avatarUrl}}" class="img"></image>
+    <!-- </view> -->
+    <!-- <view class=""> -->
+    <!-- <view> -->
+
+    <text>{{nickName}}</text>
+  </view>
+   <view>
+  <button open-type="getUserInfo" bindgetuserinfo="onGetUserInfo" class="btnconinter" size="default">点击获取信息>></button>
+  </view>
+  <!-- <button class="userinfo-nickname" bindtap="onGetOpenid">点击获取 openid</button> -->
+  <!-- </view> -->
+</view>

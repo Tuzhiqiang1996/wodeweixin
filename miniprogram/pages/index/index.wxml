@@ -1,0 +1,48 @@
+<!--pages/index/index.wxml-->
+<!-- <text>pages/index/index.wxml</text> -->
+<!-- 搜索框 -->
+<view class='page_row' bindtap="suo">
+  <view class="search">
+    <view class="df search_arr">
+      <icon class="searchcion" size='16' type='search'></icon>
+      <input class="sousuo" disabled placeholder="搜索" bindtap='search' />
+    </view>
+  </view>
+</view>
+<!-- 轮播图 -->
+<view>
+  <swiper class="coninter" autoplay="{{autoplay}}" circular="{{circular}}" indicator-dots="{{indicatorDots}}" indicator-active-color="{{activecolor}}">
+    <swiper-item>
+      <image src="../../images/a1.jpg"></image>
+    </swiper-item>
+    <swiper-item>
+      <image src="../../images/a2.jpg"></image>
+    </swiper-item>
+  </swiper>
+</view>
+<!-- 内容 -->
+<view class="ttop">
+<view class="first">
+  <navigator url="../../pages/movie/movie">
+    <image src="../../images/message-active.png" class="fimg"></image>
+    <text>豆瓣电影</text>
+  </navigator>
+  <navigator url="../../pages/map/map">
+    <image src="../../images/message-active.png" class="fimg"></image>
+    <text>定位服务</text>
+  </navigator>
+  <navigator>
+    <image src="../../images/message-active.png" class="fimg"></image>
+    <text>文字1</text>
+  </navigator>
+  <navigator>
+    <image src="../../images/message-active.png" class="fimg"></image>
+    <text>文字1</text>
+  </navigator>
+</view>
+<view>
+
+
+
+</view>
+</view>

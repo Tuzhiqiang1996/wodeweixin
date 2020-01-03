@@ -1,0 +1,26 @@
+/* pages/home/home.wxss */
+.coninter{
+  text-align: center;
+  display: flex;
+justify-content: space-around;
+align-items: center;
+background: #fff;
+}
+.subconinter{
+  /* display: inherit;
+line-height: 91rpx; */
+display: flex;
+justify-content: space-around;
+align-items: center;
+flex-wrap: wrap;
+}
+.subconinter text{
+margin: 0 10rpx 0;
+}
+.img{
+border-radius: 50%;
+width: 100rpx;height: 100rpx;
+}
+.btnconinter{
+  color: #999;
+}

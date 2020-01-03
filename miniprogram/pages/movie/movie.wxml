@@ -1,0 +1,25 @@
+<!--pages/home/home1.wxml-->
+<!-- 创建一部电影标签 start 循环 -->
+<view class="movie" wx:for="{{list}}" wx:key="index">
+  <!-- 左侧电影海报 图片 -->
+  <image class="movie-img" src="{{item.images.small}}"></image>
+  <!-- 右侧电影简介 -->
+  <view class="moive-info">
+    <!-- 右侧电影简介 标题 -->
+    <view class="moive-title">{{item.title}}</view>
+    <!-- 右侧电影简介 电影评分 -->
+    <view class="moive-score"> {{item.rating.average}}</view>
+    <!-- 右侧电影简介 主演 -->
+    <view> 主演:
+      <text>{{item.casts[0].name}}</text>
+    </view>
+    <!-- 右侧电影简介 电影年份 -->
+    <view>{{item.year}}</view>
+    <!-- 右侧电影简介 电影详情 按钮 -->
+    <!-- 绑定自定义属性   电影id-->
+    <!-- // 为button添加自定义事件,调用data-id 电影id
+  // 为button添加点击事件调用jump -->
+    <button class="moive-comment" data-id="{{item.id}}" bindtap="jumpComment">详情</button>
+    <!-- 创建一部电影标签 -->
+  </view>
+</view>

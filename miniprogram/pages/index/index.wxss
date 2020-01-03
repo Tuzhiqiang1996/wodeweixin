@@ -1,0 +1,82 @@
+/* pages/index/index.wxss */
+
+.search {
+  /* width: 98%; */
+  width: 100%;
+}
+
+.search_arr {
+  border: 1px solid #d0d0d0;
+  border-radius: 10rpx;
+  /* margin-left: 20rpx; */
+  margin: 10rpx 20rpx 10rpx 20rpx;
+}
+
+.search_arr input {
+  margin-left: 60rpx;
+  height: 60rpx;
+  border-radius: 5px;
+}
+
+.sousuo {
+  padding-left: 38%;
+  width: 15%;
+  line-height: 150%;
+  text-align: center;
+}
+
+.page_row {
+  display: flex;
+  flex-direction: row;
+}
+
+.searchcion {
+  margin: 10rpx 10rpx 10rpx 10rpx;
+  position: absolute;
+  margin-left: 38%;
+  z-index: 2;
+  width: 15px;
+  height: 15px;
+  text-align: center;
+  line-height: 63rpx;
+
+}
+.coninter swiper{
+  height: 267rpx;
+}
+.coninter swiper-item {
+  width: 100%;
+}
+
+.coninter swiper-item image {
+  width: 100%;
+}
+
+.ttop {
+  background: #F6F6F6;
+
+}
+
+.first {
+  margin: 10rpx 20rpx;
+  text-align: cemter;
+  background: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  border-radius: 10rpx;
+
+}
+.first navigator{
+  text-align: center;
+}
+
+.first  .fimg {
+  width: 100rpx;
+  height: 100rpx;
+}
+
+.first text {
+  display: inherit;
+  text-align: center;
+}
